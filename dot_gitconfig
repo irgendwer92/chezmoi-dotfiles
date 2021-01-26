@@ -1,0 +1,34 @@
+# [user]
+# 	name = erdii
+# 	email = me@erdii.engineering
+# 	signingkey = 76B67EDF3D01CD2A9807243F13D13FFCE8A95DAE
+
+[user]
+	email = jgwosdz@redhat.com
+	name = Josh Gwosdz
+	signingkey = F62CBF9116DEDD399E14F90F613DF5DE1971590F
+
+[gpg]
+	program = gpg
+
+[commit]
+	gpgsign = true
+
+[push]
+	followTags = true
+
+[pull]
+	rebase = false
+
+[alias]
+	hist = log --pretty=format:'%h %ad [%an] %s%d' --graph --date=short --color --decorate
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+
+[init]
+	defaultBranch = main
