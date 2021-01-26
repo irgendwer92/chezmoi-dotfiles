@@ -1,3 +1,3 @@
-if [[ -f $(which yaegi) ]] && [[ -f $(which rlwrap) ]]; then
+if [[ -f $(command -v yaegi) ]] && [[ -f $(command -v rlwrap) ]]; then
   alias yaegi="rlwrap yaegi"
 fi
