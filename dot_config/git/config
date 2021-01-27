@@ -1,0 +1,33 @@
+[alias]
+	hist = log --pretty=format:'%h %ad [%an] %s%d' --graph --date=short --color --decorate
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+
+[gpg]
+	program = gpg
+
+[commit]
+	gpgsign = true
+
+[push]
+	followTags = true
+
+[pull]
+	rebase = false
+
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+
+[init]
+	defaultBranch = main
+
+[core]
+	excludesfile = ~/.config/git/ignore
+
+[Include]
+	path = "custom/private.conf"
+
+[IncludeIf "gitdir/i:~/projects/redhat/"]
+	path = "custom/redhat.conf"
