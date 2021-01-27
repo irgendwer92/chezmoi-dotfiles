@@ -1,8 +1,20 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
 # Path to your oh-my-zsh installation.
-export ZSH="/home/erdii/.oh-my-zsh"
+if [[ -d "/usr/share/oh-my-zsh" ]]; then
+  export ZSH="/usr/share/oh-my-zsh"
+else
+  export ZSH="/home/erdii/.oh-my-zsh"
+fi
+
+export ZSH_CACHE_DIR="$HOME/.cache/oh-my-zsh"
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,7 +82,7 @@ ZSH_CUSTOM=$HOME/.local/share/zsh-custom
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(common-aliases systemd fzf aws)
+plugins=(common-aliases systemd fzf direnv kubectl docker aws)
 
 source $ZSH/oh-my-zsh.sh
 
