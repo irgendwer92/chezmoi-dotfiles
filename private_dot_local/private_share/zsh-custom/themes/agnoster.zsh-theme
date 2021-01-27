@@ -197,6 +197,7 @@ prompt_hg() {
 
 prompt_k8s() {
   (( $+commands[kubectl] )) || return
+	(( ${+KUBECONFIG} )) || return
 	prompt_segment blue $CURRENT_FG "\\u2388 $(kubectl config current-context)"
 }
 
@@ -241,7 +242,7 @@ build_prompt() {
   prompt_virtualenv
   prompt_git
   prompt_aws
-  prompt_segment black default "\n"
+  # prompt_segment black default "\n"
   prompt_status
   prompt_dir
   # prompt_bzr
