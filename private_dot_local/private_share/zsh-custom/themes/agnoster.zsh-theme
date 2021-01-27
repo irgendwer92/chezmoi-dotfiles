@@ -238,15 +238,15 @@ build_prompt() {
   RETVAL=$?
   # prompt_context
 	# prompt_segment blue black "$USER@$HOST"
-  prompt_k8s
-  prompt_virtualenv
-  prompt_git
-  prompt_aws
   # prompt_segment black default "\n"
   prompt_status
+  prompt_k8s
+  prompt_virtualenv
   prompt_dir
   # prompt_bzr
   # prompt_hg
+  prompt_git
+  prompt_aws
   prompt_end
 }
 
