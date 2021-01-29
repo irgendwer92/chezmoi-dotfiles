@@ -49,6 +49,10 @@ function mount-ubuntu-legacy-root() {
 	sudo mount /dev/ubuntu-vg/root /mnt/dev/old-crypt
 }
 
+function cbt() {
+	pasta | "$@" | copy
+}
+
 ###
 ## GUI
 ###
