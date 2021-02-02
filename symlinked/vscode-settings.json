@@ -1,0 +1,32 @@
+{
+    "go.useLanguageServer": true,
+    "editor.renderWhitespace": "boundary",
+    "files.associations": {
+        "*.hcl": "terraform",
+        "*.go2": "go"
+    },
+    "window.zoomLevel": 1,
+    "git.suggestSmartCommit": false,
+    "explorer.confirmDragAndDrop": false,
+    "git.confirmSync": false,
+    "explorer.confirmDelete": false,
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "update.mode": "none",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    }
+}
