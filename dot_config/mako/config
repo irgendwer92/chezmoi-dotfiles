@@ -1,0 +1,18 @@
+font=Fira Code 15
+
+background-color=#3e4451
+text-color=#abb2bf
+border-color=#abb2bf
+default-timeout=10000
+
+[urgency=low]
+background-color=#353b45
+text-color=#545862
+border-color=#abb2bf
+
+[urgency=high]
+background-color=#e06c75
+text-color=#b6bdca
+border-color=#abb2bf
+ignore-timeout=true
+default-timeout=0
