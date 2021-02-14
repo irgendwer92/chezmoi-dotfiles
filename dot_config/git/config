@@ -4,6 +4,8 @@
 	ci = commit
 	st = status
 	br = branch
+	pull-without-checkout = "!f() { git fetch \"$1\" \"$2\"; git update-ref \"refs/heads/$2\" \"refs/remotes/$1/$2\"; }; f"
+	sync-without-checkout = "!f() { git pull-without-checkout \"$1\" \"$2\"; git push \"$3\" \"$2\"; }; f"
 
 [gpg]
 	program = gpg
