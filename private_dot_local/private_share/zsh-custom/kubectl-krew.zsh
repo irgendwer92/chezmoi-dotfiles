@@ -9,5 +9,5 @@
 # )
 
 if [[ -d $HOME/.krew ]]; then
-  export PATH="$HOME/.krew/bin:$PATH"
+  export PATH="$PATH:$HOME/.krew/bin"
 fi
