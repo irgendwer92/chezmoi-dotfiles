@@ -1,7 +1,9 @@
 #!/bin/sh
 
-echo "running script $0"
+# this script is re-executed every time it's content changes (after templating)
 
-cat <<EOF > ~/.debuglog
+echo "loading changed dconf/gnome settings"
+
+dconf load / <<EOFEOFEOF
 {{ include "dot_config/private_dconf/settings.ini" }}
-EOF
+EOFEOFEOF
