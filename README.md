@@ -17,6 +17,8 @@ chezmoi update
 
 ## make changes
 
+auto-commit and auto-push is enabled in chezmoi!
+
 ```
 chezmoiz edit ~/.zshrc
 chezmoi diff
