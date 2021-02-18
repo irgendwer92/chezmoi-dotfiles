@@ -5,7 +5,6 @@
         "*.hcl": "terraform",
         "*.go2": "go"
     },
-    "window.zoomLevel": 1,
     "git.suggestSmartCommit": false,
     "explorer.confirmDragAndDrop": false,
     "git.confirmSync": false,
@@ -28,5 +27,7 @@
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
         "editor.wordBasedSuggestions": false
-    }
+    },
+    "window.zoomLevel": 1,
+    "files.insertFinalNewline": true
 }

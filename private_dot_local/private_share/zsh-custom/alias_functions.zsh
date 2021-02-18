@@ -18,6 +18,7 @@ alias fuck="sudo !!"
 alias copy="xsel -bi"
 alias pasta="xsel -bo"
 alias termbin="nc termbin.com 9999"
+alias kw="watch kubectl"
 
 # fzf-preview jq on all json files
 alias fzf-jq="echo '' | fzf --print-query --preview 'cat *.json | jq {q}'"
@@ -113,48 +114,4 @@ function npm-publish(){
     git push --follow-tags && \
     npm publish
 }
-
-###
-###
-###
-# MIGRATION
-###
-
-function backup-packages() {
-	CURRENT_PATH=$(pwd)
-	MIGRATION_PATH="$HOME/Nextcloud/migration/mac_$(date +"%Y%m%d_%H%M%S")"
-	mkdir -p "$MIGRATION_PATH"
-	cd "$MIGRATION_PATH"
-	echo "saving brew packages (cli)"
-	brew list > brew_list
-	echo "saving brew cask packages (apps)"
-	brew cask list >  brew_cask_list
-	echo "saving mac app store packages"
-	mas list > mas_list
-	cd "$CURRENT_PATH"
-}
-
-function install-packages() {
-	CURRENT_PATH=$(pwd)
-	MIGRATION_PATH="$1"
-	cd "$MIGRATION_PATH"
-	echo "installing brew packages (cli)"
-	cat brew_list | xargs -I "{}" brew install {}
-	echo "installing brew cask packages (apps)"
-	cat brew_cask_list | xargs -I "{}" brew cask install {}
-	echo "installing mac app store packages"
-	cat mas_list | cut -d " " -f 1 | xargs -I "{}" mas install {}
-}
-
-
-#######################
-## LOODSE/KUBERMATIC ##
-#######################
-function k8c-cluster() {
-	TMP_KUBECONFIG=$(mktemp)
-	local cluster="$(kubectl get cluster | _inline_fzf | awk '{print $1}')"
-	kubectl get secret admin-kubeconfig -n cluster-$cluster -o go-template='{{ index .data "kubeconfig" }}' | base64 -d > $TMP_KUBECONFIG
-	KUBECONFIG=$TMP_KUBECONFIG $SHELL
-}
-
 
