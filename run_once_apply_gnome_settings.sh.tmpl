@@ -1,9 +1,10 @@
 #!/bin/sh
 
+{{ $dconfIniRelPath := "ignored_files/dconf.ini" }}
+
 # this script is re-executed every time it's content changes (after templating)
 
 echo "loading changed dconf/gnome settings"
+echo "hash: {{ include $dconfIniRelPath | sha256sum }}"
 
-dconf load / <<EOFEOFEOF
-{{ include "dot_config/private_dconf/settings.ini" }}
-EOFEOFEOF
+dconf load / < "$(chezmoi source-path)/{{ $dconfIniRelPath }}"
