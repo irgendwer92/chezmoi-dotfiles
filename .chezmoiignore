@@ -1,3 +1,4 @@
 README.md
-symlinked/
-ignored_files
+.pre-commit-config.yaml
+
+ignored/
