@@ -1,10 +1,8 @@
-exclude: "vendor/ | *.deepcopy.go"
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v2.4.0
   hooks:
   - id: check-added-large-files
-    exclude: "config/swagger/.*"
   - id: check-case-conflict
   - id: check-json
   - id: check-merge-conflict
@@ -14,4 +12,5 @@ repos:
   - id: pretty-format-json
     args:
     - --autofix
+    exclude: "ignored/symlinked/.*"
   - id: trailing-whitespace

@@ -137,73 +137,15 @@ prompt_git() {
   fi
 }
 
-prompt_bzr() {
-    (( $+commands[bzr] )) || return
-    if (bzr status >/dev/null 2>&1); then
-        status_mod=`bzr status | head -n1 | grep "modified" | wc -m`
-        status_all=`bzr status | head -n1 | wc -m`
-        revision=`bzr log | head -n2 | tail -n1 | sed 's/^revno: //'`
-        if [[ $status_mod -gt 0 ]] ; then
-            prompt_segment yellow black
-            echo -n "bzr@"$revision "✚ "
-        else
-            if [[ $status_all -gt 0 ]] ; then
-                prompt_segment yellow black
-                echo -n "bzr@"$revision
-
-            else
-                prompt_segment green black
-                echo -n "bzr@"$revision
-            fi
-        fi
-    fi
-}
-
-prompt_hg() {
-  (( $+commands[hg] )) || return
-  local rev st branch
-  if $(hg id >/dev/null 2>&1); then
-    if $(hg prompt >/dev/null 2>&1); then
-      if [[ $(hg prompt "{status|unknown}") = "?" ]]; then
-        # if files are not added
-        prompt_segment red white
-        st='±'
-      elif [[ -n $(hg prompt "{status|modified}") ]]; then
-        # if any modification
-        prompt_segment yellow black
-        st='±'
-      else
-        # if working copy is clean
-        prompt_segment green $CURRENT_FG
-      fi
-      echo -n $(hg prompt "☿ {rev}@{branch}") $st
-    else
-      st=""
-      rev=$(hg id -n 2>/dev/null | sed 's/[^-0-9]//g')
-      branch=$(hg id -b 2>/dev/null)
-      if `hg st | grep -q "^\?"`; then
-        prompt_segment red black
-        st='±'
-      elif `hg st | grep -q "^[MA]"`; then
-        prompt_segment yellow black
-        st='±'
-      else
-        prompt_segment green $CURRENT_FG
-      fi
-      echo -n "☿ $rev@$branch" $st
-    fi
-  fi
-}
-
 prompt_k8s() {
   (( $+commands[kubectl] )) || return
-	(( ${+KUBECONFIG} )) || return
-	prompt_segment blue $CURRENT_FG "\\u2388 $(kubectl config current-context)"
+  (( ${+KUBECONFIG} )) || return
+  prompt_segment blue $CURRENT_FG "\\u2388 $(kubectl config current-context)"
 }
 
 prompt_aws() {
   (( ${+AWS_PROFILE} )) || return
-	prompt_segment yellow $CURRENT_FG "AWS Profile: $AWS_PROFILE"
+  prompt_segment yellow $CURRENT_FG "AWS: $AWS_PROFILE"
 }
 
 # Dir: current working directory
@@ -226,7 +168,7 @@ prompt_virtualenv() {
 prompt_status() {
   local -a symbols
 
-  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘ [$RETVAL]" || symbols+="%{%F{green}%}✔ [$RETVAL]"
+  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘ [$RETVAL]" || symbols+="%{%F{green}%}✔"
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
 
@@ -236,15 +178,11 @@ prompt_status() {
 ## Main prompt
 build_prompt() {
   RETVAL=$?
-  # prompt_context
-	# prompt_segment blue black "$USER@$HOST"
-  # prompt_segment black default "\n"
+  prompt_context
   prompt_status
   prompt_k8s
   prompt_virtualenv
   prompt_dir
-  # prompt_bzr
-  # prompt_hg
   prompt_git
   prompt_aws
   prompt_end
