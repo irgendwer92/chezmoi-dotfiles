@@ -19,4 +19,3 @@ selected=$(echo "$all_windows" | wofi -dmenu | awk '{print $1}')
 
 # Tell sway to focus said window
 swaymsg [con_id="$selected"] focus
-

@@ -114,4 +114,3 @@ function npm-publish(){
     git push --follow-tags && \
     npm publish
 }
-
