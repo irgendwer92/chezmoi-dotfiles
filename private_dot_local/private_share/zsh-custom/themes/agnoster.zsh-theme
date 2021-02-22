@@ -140,7 +140,7 @@ prompt_git() {
 prompt_k8s() {
   (( $+commands[kubectl] )) || return
   (( ${+KUBECONFIG} )) || return
-  prompt_segment blue $CURRENT_FG "\\u2388 $(kubectl config current-context)"
+  prompt_segment cyan $CURRENT_FG "\\u2388 $(kubectl config current-context)"
 }
 
 prompt_aws() {
