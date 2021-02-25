@@ -28,7 +28,7 @@
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
   "update.mode": "none",
-  "window.zoomLevel": 1,
   "workbench.enableExperiments": false,
-  "workbench.settings.enableNaturalLanguageSearch": false
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "terminal.integrated.fontFamily": "Fira Code"
 }
