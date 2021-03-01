@@ -18,7 +18,6 @@ alias fuck="sudo !!"
 alias copy="xsel -bi"
 alias pasta="xsel -bo"
 alias termbin="nc termbin.com 9999"
-alias kw="watch kubectl"
 
 # fzf-preview jq on all json files
 alias fzf-jq="echo '' | fzf --print-query --preview 'cat *.json | jq {q}'"
