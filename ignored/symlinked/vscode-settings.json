@@ -30,5 +30,6 @@
   "update.mode": "none",
   "workbench.enableExperiments": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
-  "terminal.integrated.fontFamily": "Fira Code"
+  "terminal.integrated.fontFamily": "Fira Code",
+  "git.alwaysSignOff": true
 }
