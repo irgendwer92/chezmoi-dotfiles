@@ -1,4 +1,4 @@
-if [[ -f $(command -v kubectl) ]]; then
+if [[ -f "$(command -v kubectl)" ]]; then
   function kubectl-apply-secret() {
     local name="$1"
     local filepath="$2"
@@ -18,6 +18,13 @@ if [[ -f $(command -v kubectl) ]]; then
       --from-file="$filepath" \
       -o yaml \
       "$@" | kubectl apply -f -
+  }
+
+  function kubeconfig-remove() {
+    if [[ -f "$KUBECONFIG" ]]; then
+      rm $KUBECONFIG
+      unset KUBECONFIG
+    fi
   }
 
   alias kas="kubectl-apply-secret"
