@@ -1,0 +1,7 @@
+{
+	"Link Github PR": {
+		"prefix": "ghpr",
+		"description": "Link directly to a github pr",
+		"body": "[#$1](https://github.com/$2/pull/$1"
+	}
+}
