@@ -32,5 +32,11 @@
   "workbench.settings.enableNaturalLanguageSearch": false,
   "terminal.integrated.fontFamily": "Fira Code",
   "git.alwaysSignOff": true,
-  "liveshare.authenticationProvider": "GitHub"
+  "liveshare.authenticationProvider": "GitHub",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ]
 }
