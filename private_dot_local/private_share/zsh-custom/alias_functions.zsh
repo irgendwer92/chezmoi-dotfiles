@@ -50,6 +50,12 @@ function cbt() {
 	pasta | "$@" | copy
 }
 
+function cb-prefix-with() {
+	cbt sed "s/^/$1/g"
+}
+
+function cb-quote() { cb-prefix-with "> " }
+
 ###
 ## GUI
 ###
