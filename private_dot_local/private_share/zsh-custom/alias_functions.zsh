@@ -6,12 +6,9 @@ alias -s git="git clone"
 ###
 # aliases
 ###
-alias open-ssh-show-tunnel="ssh -nNT -R 3001:localhost:3000 show.werise.de &"
 alias date-iso="date --utc +%FT%T.%3NZ"
 alias create-nvmrc="node --version | tr -d 'v' > .nvmrc"
 # alias ping="prettyping"
-alias docker-for-mac-enter="docker run -it --rm --privileged --pid=host debian nsenter -t 1 -m -u -n -i sh"
-alias flush-memcached="echo 'flush_all' | nc localhost 11211"
 alias vim="nvim"
 alias vimdiff="nvim -d"
 alias fuck="sudo !!"
