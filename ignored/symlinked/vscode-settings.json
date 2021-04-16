@@ -38,5 +38,6 @@
       "viewType": "jupyter.notebook.ipynb",
       "filenamePattern": "*.ipynb"
     }
-  ]
+  ],
+  "go.toolsManagement.autoUpdate": true
 }
