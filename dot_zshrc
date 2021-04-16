@@ -1,6 +1,8 @@
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
+set -o pipefail
+
 # find oh-my-zsh installation folder
 if [[ -d "/usr/share/oh-my-zsh" ]]; then
   export ZSH="/usr/share/oh-my-zsh"
