@@ -29,4 +29,8 @@ if [[ -f "$(command -v kubectl)" ]]; then
 
   alias kas="kubectl-apply-secret"
   alias kw="watch kubectl"
+
+  function kexport() {
+	  export KUBECONFIG="$1"
+  }
 fi
