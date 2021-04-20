@@ -17,7 +17,7 @@
 	followTags = true
 
 [pull]
-	rebase = false
+	rebase = true
 
 [credential]
 	helper = /usr/lib/git-core/git-credential-libsecret
