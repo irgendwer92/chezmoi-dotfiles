@@ -31,6 +31,10 @@ if [[ -f "$(command -v kubectl)" ]]; then
   alias kw="watch kubectl"
 
   function kexport() {
-	  export KUBECONFIG="$1"
+    export KUBECONFIG="$1"
+  }
+
+  function kunset() {
+    unset KUBECONFIG
   }
 fi
