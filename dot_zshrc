@@ -6,6 +6,9 @@ set -o pipefail
 # find oh-my-zsh installation folder
 if [[ -d "/usr/share/oh-my-zsh" ]]; then
   export ZSH="/usr/share/oh-my-zsh"
+elif [[ -d "/run/current-system/sw/share/oh-my-zsh/" ]]; then
+  export ZSH="/run/current-system/sw/share/oh-my-zsh/"
+  export FZF_BASE="/run/current-system/sw/share/fzf/"
 else
   export ZSH="/home/erdii/.oh-my-zsh"
 fi
