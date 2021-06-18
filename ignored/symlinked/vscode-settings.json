@@ -33,11 +33,12 @@
   "terminal.integrated.fontFamily": "Fira Code",
   "git.alwaysSignOff": true,
   "liveshare.authenticationProvider": "GitHub",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
-  "go.toolsManagement.autoUpdate": true
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "workbench.editor.untitled.hint": "hidden",
+  "window.zoomLevel": 1,
+  "workbench.startupEditor": "none",
+  "redhat.telemetry.enabled": false
 }
