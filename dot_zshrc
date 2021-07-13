@@ -20,14 +20,11 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
 fi
 
 ZSH_THEME="agnoster"
-
-# Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=$HOME/.local/share/zsh-custom
 
-# Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(common-aliases systemd fzf direnv kubectl docker aws archlinux)
+plugins=(common-aliases systemd fzf direnv kubectl docker podman aws archlinux)
 
 source $ZSH/oh-my-zsh.sh
 
