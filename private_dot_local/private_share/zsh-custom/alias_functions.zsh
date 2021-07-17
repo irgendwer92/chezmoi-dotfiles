@@ -39,22 +39,7 @@ function ssh-keys-from-github() {
 # functions
 ###
 
-function mount-ubuntu-legacy-root() {
-	sudo cryptsetup open /dev/nvme0n1p3 old-crypt
-	# lol: mount: /mnt/dev/old-crypt: special device /dev/ubuntu-vg/root does not exist.
-	sleep 5
-	sudo mount /dev/ubuntu-vg/root /mnt/dev/old-crypt
-}
-
-function cbt() {
-	pasta | "$@" | copy
-}
-
-function cb-prefix-with() {
-	cbt sed "s/^/$1/g"
-}
-
-function cb-quote() { cb-prefix-with "> " }
+function auropen() { gio open "https://aur.archlinux.org/packages/$1" }
 
 ###
 ## GUI
