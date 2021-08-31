@@ -24,7 +24,7 @@ ZSH_CUSTOM=$HOME/.local/share/zsh-custom
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(common-aliases systemd fzf direnv kubectl docker podman aws archlinux)
+plugins=(common-aliases systemd fzf direnv kubectl docker podman archlinux)
 
 source $ZSH/oh-my-zsh.sh
 
