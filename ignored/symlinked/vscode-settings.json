@@ -19,7 +19,8 @@
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
     "*.go2": "go",
-    "*.hcl": "terraform"
+    "*.hcl": "terraform",
+    "*.Makefile": "makefile"
   },
   "files.insertFinalNewline": true,
   "git.confirmSync": false,
@@ -38,7 +39,6 @@
   },
   "go.toolsManagement.autoUpdate": true,
   "workbench.editor.untitled.hint": "hidden",
-  "window.zoomLevel": 1,
   "workbench.startupEditor": "none",
   "redhat.telemetry.enabled": false
 }
