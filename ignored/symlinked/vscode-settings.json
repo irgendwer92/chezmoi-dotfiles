@@ -40,5 +40,8 @@
   "go.toolsManagement.autoUpdate": true,
   "workbench.editor.untitled.hint": "hidden",
   "workbench.startupEditor": "none",
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "window.zoomLevel": 1,
+  "editor.wordWrap": "wordWrapColumn",
+  "go.lintTool": "golangci-lint"
 }
