@@ -29,7 +29,7 @@ plugins=(common-aliases systemd fzf direnv kubectl archlinux)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export EDITOR=vim
+export EDITOR=nano
 export DEFAULT_USER=richy
 
 # Compilation flags
