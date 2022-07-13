@@ -25,3 +25,8 @@ chezmoi diff
 chezmoi -v apply
 chezmoi git status/add/commit
 ```
+
+
+## if oh-my-zsh themes don't work on arch
+
+uninstall grml-zsh-config `yay -Rncs grml-zsh-config`

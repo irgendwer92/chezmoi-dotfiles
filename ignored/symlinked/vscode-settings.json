@@ -40,7 +40,7 @@
   "workbench.editor.untitled.hint": "hidden",
   "workbench.startupEditor": "none",
   "redhat.telemetry.enabled": false,
-  "window.zoomLevel": 1,
   "editor.wordWrap": "wordWrapColumn",
-  "go.lintTool": "golangci-lint"
+  "go.lintTool": "golangci-lint",
+  "window.zoomLevel": 1
 }
