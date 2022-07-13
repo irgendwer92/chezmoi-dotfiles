@@ -10,7 +10,7 @@ elif [[ -d "/run/current-system/sw/share/oh-my-zsh/" ]]; then
   export ZSH="/run/current-system/sw/share/oh-my-zsh/"
   export FZF_BASE="/run/current-system/sw/share/fzf/"
 else
-  export ZSH="/home/erdii/.oh-my-zsh"
+  export ZSH="/home/richy/.oh-my-zsh"
 fi
 
 # ensure cache folder
@@ -24,13 +24,13 @@ ZSH_CUSTOM=$HOME/.local/share/zsh-custom
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(common-aliases systemd fzf direnv kubectl docker podman archlinux)
+plugins=(common-aliases systemd fzf direnv kubectl archlinux)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export EDITOR=nvim
-export DEFAULT_USER=erdii
+export EDITOR=vim
+export DEFAULT_USER=richy
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

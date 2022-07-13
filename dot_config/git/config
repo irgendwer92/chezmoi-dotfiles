@@ -11,7 +11,7 @@
 	program = gpg
 
 [commit]
-	gpgsign = true
+	gpgsign = false
 
 [push]
 	followTags = true
@@ -30,6 +30,3 @@
 
 [Include]
 	path = "custom/private.conf"
-
-[IncludeIf "gitdir/i:~/projects/redhat/"]
-	path = "custom/redhat.conf"
