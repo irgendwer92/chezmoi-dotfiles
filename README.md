@@ -37,7 +37,7 @@ chezmoi -v apply
 chezmoi git status/add/commit
 
 ```
-
+## install zsh, fzf, oh-my-zsh
 
 
 ## if oh-my-zsh themes don't work on arch
